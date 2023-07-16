@@ -1,0 +1,1324 @@
+{
+	"info": {
+		"_postman_id": "13d8933b-fbff-4d10-be66-453bd9aad623",
+		"name": "ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12125690"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "76cdfedd94668cc50cb470fde9c699a3602e71175fdb6eb9d3281fc3cdd2cbaf943ec197d9748a99811970d4519b203fc2eeb3f612612df382b9a4f64afd67ef5308a48fa7ca97ff62dd7ace586635753038537a7dd27431ce628907973457abd74f42837c7dcfb627a355addf741b8b97964ac0ddbead9df2058d4205a1f694",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Yusup\",\n    \"password\":\"321!@#\",\n    \"email\":\"yusupsanjaya8@gmail.com\",\n    \"username\":\"yusup\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/auth/local/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"auth",
+						"local",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Yusup\",\n    \"password\":\"321!@#\",\n    \"email\":\"yusupsanjaya8@gmail.com\",\n    \"username\":\"yusup\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/auth/local/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"auth",
+								"local",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "10"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "9"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1689417588"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "544"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 15 Jul 2023 10:38:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"jwt\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5NDE3NTI3LCJleHAiOjE2OTIwMDk1Mjd9.z5w9QqEvre6Q_i1Psl7HJ0wgPLHmtq3ASKDAMWR4kVA\",\n    \"user\": {\n        \"id\": 1,\n        \"username\": \"yusup\",\n        \"email\": \"yusupsanjaya8@gmail.com\",\n        \"provider\": \"local\",\n        \"confirmed\": true,\n        \"blocked\": false,\n        \"createdAt\": \"2023-07-15T10:38:47.208Z\",\n        \"updatedAt\": \"2023-07-15T10:38:47.208Z\",\n        \"role\": {\n            \"id\": 1,\n            \"name\": \"Authenticated\",\n            \"description\": \"Default role given to authenticated user.\",\n            \"type\": \"authenticated\",\n            \"createdAt\": \"2023-07-08T12:57:43.205Z\",\n            \"updatedAt\": \"2023-07-08T12:57:43.205Z\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"identifier\":\"yusupsanjaya8@gmail.com\",\n    \"password\":\"321!@#\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/auth/local",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"auth",
+						"local"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"identifier\":\"yusupsanjaya8@gmail.com\",\n    \"password\":\"321!@#\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/auth/local",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"auth",
+								"local"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "10"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "9"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1689418197"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "346"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 15 Jul 2023 10:48:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"jwt\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5NDE4MTM2LCJleHAiOjE2OTIwMTAxMzZ9.4N0NlxlIn0VHe0mHBEwnaE4lBS63MbJcx5zWVdmVsu8\",\n    \"user\": {\n        \"id\": 1,\n        \"username\": \"yusup\",\n        \"email\": \"yusupsanjaya8@gmail.com\",\n        \"provider\": \"local\",\n        \"confirmed\": true,\n        \"blocked\": false,\n        \"createdAt\": \"2023-07-15T10:38:47.208Z\",\n        \"updatedAt\": \"2023-07-15T10:38:47.208Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1337/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1337/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "393"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 15 Jul 2023 11:37:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"attributes\": {\n                \"name\": \"Buah Naga\",\n                \"description\": \"Buah naga adalah buah yang kaya manfaat.\",\n                \"quantity\": 10,\n                \"price\": 20000,\n                \"inStock\": true,\n                \"distributor\": \"Bandarbuah\",\n                \"createdAt\": \"2023-07-15T11:35:53.281Z\",\n                \"updatedAt\": \"2023-07-15T11:37:53.146Z\",\n                \"publishedAt\": \"2023-07-15T11:37:53.136Z\",\n                \"image\": \"buahnaga.jpg\"\n            }\n        }\n    ],\n    \"meta\": {\n        \"pagination\": {\n            \"page\": 1,\n            \"pageSize\": 25,\n            \"pageCount\": 1,\n            \"total\": 1\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Product by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1337/api/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1337/api/products/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "330"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 15 Jul 2023 11:47:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"attributes\": {\n            \"name\": \"Buah Naga\",\n            \"description\": \"Buah naga adalah buah yang kaya manfaat.\",\n            \"quantity\": 10,\n            \"price\": 20000,\n            \"inStock\": true,\n            \"distributor\": \"Bandarbuah\",\n            \"createdAt\": \"2023-07-15T11:35:53.281Z\",\n            \"updatedAt\": \"2023-07-15T11:37:53.146Z\",\n            \"publishedAt\": \"2023-07-15T11:37:53.136Z\",\n            \"image\": \"buahnaga.jpg\"\n        }\n    },\n    \"meta\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "76cdfedd94668cc50cb470fde9c699a3602e71175fdb6eb9d3281fc3cdd2cbaf943ec197d9748a99811970d4519b203fc2eeb3f612612df382b9a4f64afd67ef5308a48fa7ca97ff62dd7ace586635753038537a7dd27431ce628907973457abd74f42837c7dcfb627a355addf741b8b97964ac0ddbead9df2058d4205a1f694",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"data\" : {\n            \n            \"name\": \"Buah Melon\",\n            \"description\": \"Buah Melon adalah buah yang kaya manfaat.\",\n            \"quantity\": 5,\n            \"price\": 30000,\n            \"inStock\": true,\n            \"distributor\": \"Bandarbuah\",\n            \"image\": \"Melon.jpg\"\n        }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"data\" : {\n            \n            \"name\": \"Buah Melon\",\n            \"description\": \"Buah Melon adalah buah yang kaya manfaat.\",\n            \"quantity\": 5,\n            \"price\": 30000,\n            \"inStock\": true,\n            \"distributor\": \"Bandarbuah\",\n            \"image\": \"Melon.jpg\"\n        }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "328"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 15 Jul 2023 12:08:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"attributes\": {\n            \"name\": \"Buah Melon\",\n            \"description\": \"Buah Melon adalah buah yang kaya manfaat.\",\n            \"quantity\": 5,\n            \"price\": 30000,\n            \"inStock\": true,\n            \"distributor\": \"Bandarbuah\",\n            \"createdAt\": \"2023-07-15T12:08:00.119Z\",\n            \"updatedAt\": \"2023-07-15T12:08:00.119Z\",\n            \"publishedAt\": \"2023-07-15T12:08:00.111Z\",\n            \"image\": \"Melon.jpg\"\n        }\n    },\n    \"meta\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5NDI0MDM5LCJleHAiOjE2OTIwMTYwMzl9.72_H75zTfRkOkUqrQ_o42lKU3U8umYw0GzWbhrhoGdc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"data\" : {\n            \n        \n            \"quantity\": 10,\n            \"price\": 60000\n\n        }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/products/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"products",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 OK",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5NDI0MDM5LCJleHAiOjE2OTIwMTYwMzl9.72_H75zTfRkOkUqrQ_o42lKU3U8umYw0GzWbhrhoGdc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"data\" : {\n            \n        \n            \"quantity\": 10,\n            \"price\": 60000\n\n        }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/products/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"products",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "329"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 15 Jul 2023 12:29:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"attributes\": {\n            \"name\": \"Buah Melon\",\n            \"description\": \"Buah Melon adalah buah yang kaya manfaat.\",\n            \"quantity\": 10,\n            \"price\": 60000,\n            \"inStock\": true,\n            \"distributor\": \"Bandarbuah\",\n            \"createdAt\": \"2023-07-15T12:08:00.119Z\",\n            \"updatedAt\": \"2023-07-15T12:29:02.727Z\",\n            \"publishedAt\": \"2023-07-15T12:08:00.111Z\",\n            \"image\": \"Melon.jpg\"\n        }\n    },\n    \"meta\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Produk",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "76cdfedd94668cc50cb470fde9c699a3602e71175fdb6eb9d3281fc3cdd2cbaf943ec197d9748a99811970d4519b203fc2eeb3f612612df382b9a4f64afd67ef5308a48fa7ca97ff62dd7ace586635753038537a7dd27431ce628907973457abd74f42837c7dcfb627a355addf741b8b97964ac0ddbead9df2058d4205a1f694",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1337/api/products/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"products",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 OK",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1337/api/products/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"products",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "329"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 15 Jul 2023 12:33:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"attributes\": {\n            \"name\": \"Buah Melon\",\n            \"description\": \"Buah Melon adalah buah yang kaya manfaat.\",\n            \"quantity\": 10,\n            \"price\": 60000,\n            \"inStock\": true,\n            \"distributor\": \"Bandarbuah\",\n            \"createdAt\": \"2023-07-15T12:08:00.119Z\",\n            \"updatedAt\": \"2023-07-15T12:29:02.727Z\",\n            \"publishedAt\": \"2023-07-15T12:08:00.111Z\",\n            \"image\": \"Melon.jpg\"\n        }\n    },\n    \"meta\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "Upload Image",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "76cdfedd94668cc50cb470fde9c699a3602e71175fdb6eb9d3281fc3cdd2cbaf943ec197d9748a99811970d4519b203fc2eeb3f612612df382b9a4f64afd67ef5308a48fa7ca97ff62dd7ace586635753038537a7dd27431ce628907973457abd74f42837c7dcfb627a355addf741b8b97964ac0ddbead9df2058d4205a1f694",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": "/home/yusup/Pictures/screenShot.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"upload"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/home/yusup/Pictures/screenShot.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "200 OK",
+							"host": [
+								"200 OK"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "804"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 15 Jul 2023 13:02:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"screenShot.png\",\n        \"alternativeText\": null,\n        \"caption\": null,\n        \"width\": 687,\n        \"height\": 486,\n        \"formats\": {\n            \"small\": {\n                \"ext\": \".png\",\n                \"url\": \"/uploads/small_screen_Shot_86031c1c63.png\",\n                \"hash\": \"small_screen_Shot_86031c1c63\",\n                \"mime\": \"image/png\",\n                \"name\": \"small_screenShot.png\",\n                \"path\": null,\n                \"size\": 25.13,\n                \"width\": 500,\n                \"height\": 354\n            },\n            \"thumbnail\": {\n                \"ext\": \".png\",\n                \"url\": \"/uploads/thumbnail_screen_Shot_86031c1c63.png\",\n                \"hash\": \"thumbnail_screen_Shot_86031c1c63\",\n                \"mime\": \"image/png\",\n                \"name\": \"thumbnail_screenShot.png\",\n                \"path\": null,\n                \"size\": 8.29,\n                \"width\": 221,\n                \"height\": 156\n            }\n        },\n        \"hash\": \"screen_Shot_86031c1c63\",\n        \"ext\": \".png\",\n        \"mime\": \"image/png\",\n        \"size\": 9.02,\n        \"url\": \"/uploads/screen_Shot_86031c1c63.png\",\n        \"previewUrl\": null,\n        \"provider\": \"local\",\n        \"provider_metadata\": null,\n        \"createdAt\": \"2023-07-15T13:02:53.180Z\",\n        \"updatedAt\": \"2023-07-15T13:02:53.180Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"items\": [\n            {\n                \"id\": 1,\n                \"qty\": 2,\n                \"price\": 50000,\n                \"productname\": \"Buah Naga\"\n            },\n            {\n                \"id\": 2,\n                \"qty\": 1,\n                \"price\": 10000,\n                \"productname\": \"Jeruk\"\n            }\n        ],\n        \"totalprice\": 110000,\n        \"deliveryaddress\": \"Jl. Rusa Dua , Kota Bandung\",\n        \"couriername\": \"Sicepat\",\n        \"shippingcost\": 30000,\n        \"statusorder\": \"waitingpayment\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"items\": [\n            {\n                \"id\": 1,\n                \"qty\": 2,\n                \"price\": 50000,\n                \"productname\": \"Buah Naga\"\n            },\n            {\n                \"id\": 2,\n                \"qty\": 1,\n                \"price\": 10000,\n                \"productname\": \"Jeruk\"\n            }\n        ],\n        \"totalprice\": 110000,\n        \"deliveryaddress\": \"Jl. Rusa Dua , Kota Bandung\",\n        \"couriername\": \"Sicepat\",\n        \"shippingcost\": 30000,\n        \"statusorder\": \"waitingpayment\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "425"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 15 Jul 2023 14:17:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"attributes\": {\n            \"items\": [\n                {\n                    \"id\": 1,\n                    \"qty\": 2,\n                    \"price\": 50000,\n                    \"productname\": \"Buah Naga\"\n                },\n                {\n                    \"id\": 2,\n                    \"qty\": 1,\n                    \"price\": 10000,\n                    \"productname\": \"Jeruk\"\n                }\n            ],\n            \"totalprice\": 110000,\n            \"deliveryaddress\": \"Jl. Rusa Dua , Kota Bandung\",\n            \"couriername\": \"Sicepat\",\n            \"shippingcost\": 30000,\n            \"statusorder\": \"waitingpayment\",\n            \"createdAt\": \"2023-07-15T14:17:29.202Z\",\n            \"updatedAt\": \"2023-07-15T14:17:29.202Z\",\n            \"publishedAt\": \"2023-07-15T14:17:29.199Z\"\n        }\n    },\n    \"meta\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "Payment-Callback",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"data\":{ \n       \n       \"va_numbers\": [\n        {\n            \"va_number\": \"60179309371\",\n            \"bank\": \"bca\"\n        }\n    ],\n    \"transaction_time\": \"2023-07-13 20:53:39\",\n    \"transaction_status\": \"settlement\",\n    \"transaction_id\": \"a4ea4cc8-c1bf-495b-8a95-fbf50f22f7d8\",\n    \"status_message\": \"midtrans payment notification\",\n    \"status_code\": \"200\",\n    \"signature_key\": \"d6d77b4ea6e0b3bb455e0de429fe76b9b73cc7ecafdef2817e62b5eae3a967d2fa5ffb01b3102c3bb775436c198b1bcccf2c81efb19f5c75e4f30154be136198\",\n    \"settlement_time\": \"2023-07-13 20:53:55\",\n    \"payment_type\": \"bank_transfer\",\n    \"payment_amounts\": [],\n    \"order_id\": 7,\n    \"merchant_id\": \"G579360179\",\n    \"gross_amount\": \"1072000.00\",\n    \"fraud_status\": \"accept\",\n    \"expiry_time\": \"2023-07-14 20:53:39\",\n    \"currency\": \"IDR\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/payment-callbacks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"payment-callbacks"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 Ok",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"data\":{ \n       \n       \"va_numbers\": [\n        {\n            \"va_number\": \"60179309371\",\n            \"bank\": \"bca\"\n        }\n    ],\n    \"transaction_time\": \"2023-07-13 20:53:39\",\n    \"transaction_status\": \"settlement\",\n    \"transaction_id\": \"a4ea4cc8-c1bf-495b-8a95-fbf50f22f7d8\",\n    \"status_message\": \"midtrans payment notification\",\n    \"status_code\": \"200\",\n    \"signature_key\": \"d6d77b4ea6e0b3bb455e0de429fe76b9b73cc7ecafdef2817e62b5eae3a967d2fa5ffb01b3102c3bb775436c198b1bcccf2c81efb19f5c75e4f30154be136198\",\n    \"settlement_time\": \"2023-07-13 20:53:55\",\n    \"payment_type\": \"bank_transfer\",\n    \"payment_amounts\": [],\n    \"order_id\": 7,\n    \"merchant_id\": \"G579360179\",\n    \"gross_amount\": \"1072000.00\",\n    \"fraud_status\": \"accept\",\n    \"expiry_time\": \"2023-07-14 20:53:39\",\n    \"currency\": \"IDR\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/payment-callbacks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"payment-callbacks"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "400"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 15 Jul 2023 23:28:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 7,\n        \"items\": [\n            {\n                \"id\": 1,\n                \"qty\": 2,\n                \"price\": 50000,\n                \"productname\": \"Buah Naga\"\n            },\n            {\n                \"id\": 2,\n                \"qty\": 1,\n                \"price\": 10000,\n                \"productname\": \"Jeruk\"\n            }\n        ],\n        \"totalprice\": 110000,\n        \"deliveryaddress\": \"Jl. Rusa Dua , Kota Bandung\",\n        \"couriername\": \"Sicepat\",\n        \"shippingcost\": 30000,\n        \"statusorder\": \"waitingpayment\",\n        \"createdAt\": \"2023-07-15T22:20:50.702Z\",\n        \"updatedAt\": \"2023-07-15T23:28:11.915Z\",\n        \"publishedAt\": \"2023-07-15T22:20:50.693Z\"\n    }\n}"
+				}
+			]
+		}
+	]
+}
